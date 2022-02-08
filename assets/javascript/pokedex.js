@@ -56,10 +56,11 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelector('.btn__more').addEventListener('click', (e) => {
     e.preventDefault();
     $(".pokemon").remove()
-    fn_btn_more($("#btn_more").attr('href'))
+    ApiRequest($("#btn_more").attr('href'))
   })
 
-  $('#btn_previus').click(function(){
+  document.querySelector('#btn_previus').addEventListener('click', (e) => {
+    e.preventDefault();
     $(".pokemon").remove()
     ApiRequest($("#btn_previus").attr('href'))
   })
