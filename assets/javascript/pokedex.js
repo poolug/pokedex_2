@@ -65,6 +65,16 @@ document.addEventListener('DOMContentLoaded', function() {
     ApiRequest($("#btn_previus").attr('href'))
   })
 
+  document.querySelector('#pokemonDamage').addEventListener('click', (e) => {
+    e.preventDefault();
+    $("#damageModal").modal('show')
+  })
+
+  document.querySelector('#pokemonAbility').addEventListener('click', (e) => {
+    e.preventDefault();
+    $("#abilityModal").modal('show')
+  })
+
   const url = "https://pokeapi.co/api/v2/pokemon/"
   ApiRequest(url)
 
